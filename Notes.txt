@@ -1,0 +1,3 @@
+__init__.py: This file should be empty, and exists solely to tell your system that your ecomstore directory should be treated like a Python module.
+manage.py: A local Python file that enables you to run various commands to administer your Django site. You’ve already used it to boot up the local development server.
+urls.py: The file responsible for mapping incoming requests to their respective responses. It’s like the phone operator in the days before cell phones.
