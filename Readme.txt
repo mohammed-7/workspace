@@ -14,3 +14,16 @@ the project flow will somewat look like this ---> main project
                                                   templates folder 
                                                   static folder 
         within the template folder we have to specify respective app folder so that all html files can go into that particular app's folder, 
+step 5: creating an app inside project folder 
+        now comes the part where all the major connections takes place between app and project folder 
+        first: the app folder doesnt have the urls file so we will either create one or copy paste from project folder, 
+        secondly: whatever the html file we create inside template>app>index.html we have to define that path into views and then direct to urls, 
+        third: write the views function first by adding a redirect module, after writting up the views now import those views in urls file which is located in same app folder. 
+        third: after the connections and importing of views and urls file now we have to connect app folder to projects urls file so that the project can know that on start when hit with the particular url we have to show up such an such url coming from app folder, to add in project url file one have to write code like the follwing ---- 
+        from django.contrib import admin
+        from django.urls import path, include
+        from app import urls as appurls
+        urlpatterns = [
+        path('admin/', admin.site.urls),
+           path('', include(appurls))
+        ]
